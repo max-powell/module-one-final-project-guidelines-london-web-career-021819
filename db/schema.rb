@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190304143502) do
+ActiveRecord::Schema.define(version: 20190304144131) do
 
   create_table "battle_packs", force: :cascade do |t|
     t.integer "user_id"
@@ -24,6 +24,11 @@ ActiveRecord::Schema.define(version: 20190304143502) do
     t.integer "pp"
     t.string  "effective_against"
     t.string  "not_effective_against"
+  end
+
+  create_table "movesets", force: :cascade do |t|
+    t.integer "pokemon_id"
+    t.integer "move_id"
   end
 
   create_table "pokemons", force: :cascade do |t|
