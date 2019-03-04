@@ -1,0 +1,19 @@
+Pokemons
+- name
+- type
+- 4 moves (fixed)
+- HP
+
+
+Pokemon moves
+- gen 1
+- name
+- power
+- accuracy
+- pp (power points)
+- move type
+
+- effectiveness: (based on move type and adversary pokemon type)
+	- 6 types: normal, fire, grass, electric, water, rock
+	https://pokemondb.net/type/old
+	- normal (x1), not very effective (x0.5), super effective (x2)
