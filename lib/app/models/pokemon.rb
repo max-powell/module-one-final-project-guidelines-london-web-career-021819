@@ -12,6 +12,7 @@ class Pokemon < ActiveRecord::Base
     else
       target.hp = new_hp
     end
+    move.pp -= 1
   end
 
   def damage_calc(move, target)
