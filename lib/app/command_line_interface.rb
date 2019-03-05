@@ -12,19 +12,22 @@ end
 
 ### create new user and prompt them to choose 3 pokemons for their battle_pack.
 def new_user(username)
-  User.create(username: username)
-  puts "Hi #{username}! We haven't seen you around here before and you don't seem to have any pokemons. No self-respected trainer walks around with no pokemons."
-  pokemon_selection
+  user = User.create(username: username)
+  new_user_welcome_message(user)
+  pokemon_selection(user)
 end
 
+def new_user_welcome_message(user)
+  puts "Hi #{user.username}! We haven't seen you around here before and you don't seem to have any pokemons. No self-respected trainer walks around with no pokemons."
+end
 
-def pokemon_selection
+def pokemon_selection(user)
   pokemon_selection_message
   pokemon_list_formatter
 end
 
 def pokemon_selection_message
-  puts "You will be choosing 3 companions for your battlepack to help you progress through your journey as a poke-trainer. Here's a list of available pokemons"
+  puts "You will be choosing 3 companions for your battlepack to help you progress through your journey as a poke-trainer. Here's a list of available pokemons."
 end
 
 def pokemon_list_formatter
@@ -34,6 +37,15 @@ end
 def pokemon_list
   Pokemon.all.map(&:name)
 end
+
+def battlepack_count(user)
+  binding.pry
+  user.battle_packs.count
+end
+
+
+
+
 
 ### check whether the user exists in the db.
 def existing_user_outcome(username)
