@@ -1,9 +1,9 @@
 Pokemon.create(name: 'Pikachu', pokemon_type: 'electric', hp: 95, attack: 54, defence: 31)
 Pokemon.create(name: 'Charmander', pokemon_type: 'fire', hp: 99, attack: 51, defence: 43)
 Pokemon.create(name: 'Bulbasaur', pokemon_type: 'grass', hp: 105, attack: 48, defence: 48)
-Pokemon.create(name: 'Squirtle', pokemon_type: 'water', hp: 104)
-Pokemon.create(name: 'Pidgey', pokemon_type: 'normal', hp: 100)
-Pokemon.create(name: 'Onix', pokemon_type: 'rock', hp: 95)
+Pokemon.create(name: 'Squirtle', pokemon_type: 'water', hp: 104, attack: 47, defence: 53)
+Pokemon.create(name: 'Pidgey', pokemon_type: 'normal', hp: 100, attack: 45, defence: 40)
+Pokemon.create(name: 'Onix', pokemon_type: 'rock', hp: 95, attack: 45, defence: 148)
 
 
 #Pikachu
@@ -76,3 +76,9 @@ Moveset.new(pokemon_id: 6, move_id: 24)
 
 User.create(username: 'max')
 User.create(username: 'khang')
+
+<<-ForRake
+pikachu = Pokemon.all[0]
+squirtle = Pokemon.all[3]
+thunder_shock = Move.all[0]
+ForRake
