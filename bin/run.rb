@@ -1,5 +1,5 @@
 require_relative '../config/environment'
 
-
-
-puts "HELLO WORLD"
+welcome
+username = gets_username
+existing_user_outcome(username)

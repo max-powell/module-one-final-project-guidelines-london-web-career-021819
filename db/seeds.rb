@@ -74,5 +74,5 @@ Moveset.new(pokemon_id: 6, move_id: 23)
 Moveset.new(pokemon_id: 6, move_id: 24)
 
 
-User.create(username: 'Max')
-User.create(username: 'Khang')
+User.create(username: 'max')
+User.create(username: 'khang')
