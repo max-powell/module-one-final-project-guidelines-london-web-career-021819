@@ -1,12 +1,16 @@
 def existing_user(username)
   user_instance = User.find_by(username: username)
   welcome_back_message(username)
-  menu_choice = menu
-  existing_user_menu_action(menu_choice, user_instance)
+  menu_loop(user_instance)
 end
 
 def welcome_back_message(username)
   puts "Welcome back #{username}!"
+end
+
+def menu_loop(user_instance)
+  menu_choice = menu
+  existing_user_menu_action(menu_choice, user_instance)
 end
 
 def menu
@@ -30,5 +34,20 @@ def existing_user_menu_action(menu_choice, user_instance)
     show_battlepack(user_instance)
   else
     puts "2. in dev"
+  end
+  continue?(user_instance)
+end
+
+def continue?(user_instance)
+  puts 'Do you want to do anything else? (Y/N)'
+  input = STDIN.gets.chomp
+  case input.downcase
+  when 'y'
+    menu_loop(user_instance)
+  when 'n'
+    puts 'See you next time!'
+  else
+    puts 'Invalid input'
+    continue?(user_instance)
   end
 end

@@ -5,10 +5,13 @@ def battle(left, right)
   current = left
   target = right
   battle_intro(current, target)
-  while current.pokemon.hp > 0 && target.pokemon.hp > 0
+  loop do
     battle_turn(current, target)
+    puts_stats(left, right)
+    break if target.pokemon.hp == 0
     current, target = target, current
   end
+  puts "#{target.pokemon.name} feinted!"
 end
 
 def battle_intro(current, target)
@@ -16,7 +19,7 @@ def battle_intro(current, target)
 end
 
 def battle_turn(current, target)
-  puts "It's #{current.pokemon.name}'s turn!'"
+  puts "It's #{current.pokemon.name}'s turn!"
   move = get_move_selection(current)
   current.pokemon.attack_target(move, target.pokemon)
 end
@@ -36,7 +39,7 @@ def get_move_selection(current)
     current.pokemon.moves[input-1]
   else
     puts "Invalid selection."
-    get_move_selection
+    get_move_selection(current)
   end
 end
 
