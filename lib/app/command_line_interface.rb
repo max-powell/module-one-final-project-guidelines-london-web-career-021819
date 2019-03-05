@@ -23,7 +23,8 @@ end
 
 def pokemon_selection(user)
   pokemon_selection_message
-  #pokemon_selection_loop
+  pokemon_selection_loop(user)
+  show_battlepack(user)
 end
 
 def pokemon_selection_message
@@ -33,8 +34,9 @@ end
 def pokemon_selection_loop(user)
   while battlepack_count(user) < 3
     battlepack_space_message(user)
-    pokemon_list_formatter
+    pokemon_list_formatter(pokemon_list)
     pokemon_instance = gets_pokemon_instance
+    create_battlepack_instance(user, pokemon_instance)
   end
 end
 
@@ -54,17 +56,17 @@ def gets_pokemon_user_string
     return input
   else
     puts "Invalid pokemon name selection."
-    gets_pokemon_user_selection
+    gets_pokemon_user_string
   end
 end
 
 def create_battlepack_instance(user, pokemon_instance)
-
   user.battle_packs.create(pokemon_id: pokemon_instance.id)
 end
 
-def pokemon_list_formatter
-  pokemon_list.each_with_index {|name, index| puts "#{index+1}. #{name}"}
+
+def pokemon_list_formatter(list)
+  list.each_with_index {|name, index| puts "#{index+1}. #{name}"}
 end
 
 def pokemon_list
@@ -74,6 +76,13 @@ end
 def battlepack_count(user)
   user.battle_packs.count
 end
+
+def show_battlepack(user)
+  puts "Congratulations #{user.username}, you have selected your 3 pokemons."
+  pokemon_selected = user.pokemons.map(&:name)
+  pokemon_list_formatter(pokemon_selected)
+end
+
 
 
 
