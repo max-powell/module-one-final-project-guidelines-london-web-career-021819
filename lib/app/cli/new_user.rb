@@ -12,7 +12,7 @@ end
 def pokemon_selection(user)
   pokemon_selection_message
   pokemon_selection_loop(user)
-  show_battlepack(user)
+  show_battlepack(user) #in utility_methods.rb
 end
 
 def pokemon_selection_message
@@ -22,7 +22,7 @@ end
 def pokemon_selection_loop(user)
   while battlepack_count(user) < 3
     battlepack_space_message(user)
-    pokemon_list_formatter(pokemon_list)
+    pokemon_list_formatter(pokemon_list) #in utility_methods.rb
     pokemon_instance = gets_pokemon_instance
     create_battlepack_instance(user, pokemon_instance)
   end
@@ -54,19 +54,10 @@ def create_battlepack_instance(user, pokemon_instance)
 end
 
 
-def pokemon_list_formatter(list)
-  list.each_with_index {|name, index| puts "#{index+1}. #{name}"}
-end
-
 def pokemon_list
   Pokemon.all.map(&:name)
 end
 
 def battlepack_count(user)
   user.battle_packs.count
-end
-
-def show_battlepack(user)
-  pokemon_selected = user.pokemons.map(&:name)
-  pokemon_list_formatter(pokemon_selected)
 end
