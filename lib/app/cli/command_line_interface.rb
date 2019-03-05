@@ -1,5 +1,5 @@
 
-### welcome greeting and prompt user to enter username.
+#### welcome greeting and prompt user to enter username.
 def welcome
   puts "Welcome to the world of Pokemon!"
 end
@@ -10,7 +10,7 @@ def gets_username
 end
 
 
-### create new user and prompt them to choose 3 pokemons for their battle_pack.
+#### create new user and prompt them to choose 3 pokemons for their battle_pack.
 def new_user(username)
   user = User.create(username: username)
   new_user_welcome_message(user)
@@ -38,6 +38,7 @@ def pokemon_selection_loop(user)
     pokemon_instance = gets_pokemon_instance
     create_battlepack_instance(user, pokemon_instance)
   end
+  puts "Congratulations #{user.username}, you have selected your 3 pokemons."
 end
 
 def battlepack_space_message(user)
@@ -78,7 +79,6 @@ def battlepack_count(user)
 end
 
 def show_battlepack(user)
-  puts "Congratulations #{user.username}, you have selected your 3 pokemons."
   pokemon_selected = user.pokemons.map(&:name)
   pokemon_list_formatter(pokemon_selected)
 end
@@ -86,10 +86,10 @@ end
 
 
 
-### check whether the user exists in the db.
+#### check whether the user exists in the db.
 def existing_user_outcome(username)
   if existing_user?(username)
-    puts "In development"
+    existing_user(username)
   else
     new_user(username)
   end

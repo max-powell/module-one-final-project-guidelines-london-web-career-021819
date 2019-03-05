@@ -4,6 +4,6 @@ welcome
 username = gets_username
 existing_user_outcome(username)
 
-binding.pry
+#binding.pry
 
 "end"
