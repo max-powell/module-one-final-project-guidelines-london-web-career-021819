@@ -34,6 +34,7 @@ def pokemon_selection_loop(user)
   while battlepack_count(user) < 3
     battlepack_space_message(user)
     pokemon_list_formatter
+    pokemon_instance = gets_pokemon_instance
   end
 end
 
@@ -41,7 +42,12 @@ def battlepack_space_message(user)
   puts "You have #{3-battlepack_count(user)} spaces left in your battlepack."
 end
 
-def gets_pokemon_user_selection
+def gets_pokemon_instance
+  pokemon_string = gets_pokemon_user_string
+  Pokemon.find_by(name: pokemon_string)
+end
+
+def gets_pokemon_user_string
   puts "Pick a pokemon"
   input = gets.chomp.capitalize
   if pokemon_list.include?(input)
@@ -52,8 +58,9 @@ def gets_pokemon_user_selection
   end
 end
 
-def create_battlepack_instance(user)
+def create_battlepack_instance(user, pokemon_instance)
 
+  user.battle_packs.create(pokemon_id: pokemon_instance.id)
 end
 
 def pokemon_list_formatter
@@ -65,7 +72,6 @@ def pokemon_list
 end
 
 def battlepack_count(user)
-  binding.pry
   user.battle_packs.count
 end
 
