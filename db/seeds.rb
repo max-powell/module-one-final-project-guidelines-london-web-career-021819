@@ -1,9 +1,9 @@
-Pokemon.create(name: 'Pikachu', pokemon_type: 'electric', hp: 95, attack: 54, defence: 31)
-Pokemon.create(name: 'Charmander', pokemon_type: 'fire', hp: 99, attack: 51, defence: 43)
-Pokemon.create(name: 'Bulbasaur', pokemon_type: 'grass', hp: 105, attack: 48, defence: 48)
-Pokemon.create(name: 'Squirtle', pokemon_type: 'water', hp: 104, attack: 47, defence: 53)
-Pokemon.create(name: 'Pidgey', pokemon_type: 'normal', hp: 100, attack: 45, defence: 40)
-Pokemon.create(name: 'Onix', pokemon_type: 'rock', hp: 95, attack: 45, defence: 148)
+pikachu = Pokemon.create(name: 'Pikachu', pokemon_type: 'electric', hp: 95, attack: 54, defence: 31)
+charmander = Pokemon.create(name: 'Charmander', pokemon_type: 'fire', hp: 99, attack: 51, defence: 43)
+bulbasaur = Pokemon.create(name: 'Bulbasaur', pokemon_type: 'grass', hp: 105, attack: 48, defence: 48)
+squirtle = Pokemon.create(name: 'Squirtle', pokemon_type: 'water', hp: 104, attack: 47, defence: 53)
+pidgey = Pokemon.create(name: 'Pidgey', pokemon_type: 'normal', hp: 100, attack: 45, defence: 40)
+onix = Pokemon.create(name: 'Onix', pokemon_type: 'rock', hp: 95, attack: 45, defence: 148)
 
 
 #Pikachu
@@ -28,7 +28,7 @@ Move.create(name: 'Solar Beam', power: 120, accuracy: 90, pp: 1, effective_again
 Move.create(name:'Bubble', power: 40, accuracy: 90, pp: 3, effective_against: 'fire', not_effective_against: 'grass')
 Move.create(name:'Hydro Pump', power: 110, accuracy: 80, pp: 1, effective_against: 'fire', not_effective_against: 'grass')
 Move.create(name:'Skull Bash', power: 110, accuracy: 80, pp: 1, effective_against: nil , not_effective_against: nil)
-Move.create(name:'	Waterfall', power: 80, accuracy: 90, pp: 2, effective_against: 'fire' , not_effective_against: 'grass')
+Move.create(name:'Waterfall', power: 80, accuracy: 90, pp: 2, effective_against: 'fire' , not_effective_against: 'grass')
 
 #Pidgey moves
 Move.create(name:'Quick Attack', power: 40, accuracy: 90, pp: 3, effective_against: nil, not_effective_against: nil)
@@ -43,36 +43,35 @@ Move.create(name: 'Rock Slide', power: 75, accuracy: 90, pp: 1, effective_agains
 Move.create(name: 'Tackle', power: 35, accuracy: 90, pp: 4, effective_against: nil, not_effective_against: nil)
 
 
-Moveset.new(pokemon_id: 1, move_id: 1)
-Moveset.new(pokemon_id: 1, move_id: 2)
-Moveset.new(pokemon_id: 1, move_id: 3)
-Moveset.new(pokemon_id: 1, move_id: 4)
+pikachu.movesets.create(move_id: Move.find_by(name: 'Thunder Shock').id)
+pikachu.movesets.create(move_id: Move.find_by(name: 'Quick Attack').id)
+pikachu.movesets.create(move_id: Move.find_by(name: 'Headbutt').id)
+pikachu.movesets.create(move_id: Move.find_by(name: 'Thunderbolt').id)
 
-Moveset.new(pokemon_id: 2, move_id: 5)
-Moveset.new(pokemon_id: 2, move_id: 6)
-Moveset.new(pokemon_id: 2, move_id: 7)
-Moveset.new(pokemon_id: 2, move_id: 8)
+charmander.movesets.create(move_id: Move.find_by(name: "Scratch").id)
+charmander.movesets.create(move_id: Move.find_by(name: "Ember").id)
+charmander.movesets.create(move_id: Move.find_by(name: "Slash").id)
+charmander.movesets.create(move_id: Move.find_by(name: "Flamethrower").id)
 
-Moveset.new(pokemon_id: 3, move_id: 9)
-Moveset.new(pokemon_id: 3, move_id: 10)
-Moveset.new(pokemon_id: 3, move_id: 11)
-Moveset.new(pokemon_id: 3, move_id: 12)
+bulbasaur.movesets.create(move_id: Move.find_by(name: "Tackle").id)
+bulbasaur.movesets.create(move_id: Move.find_by(name: "Vine Whip").id)
+bulbasaur.movesets.create(move_id: Move.find_by(name: "Razor Leaf").id)
+bulbasaur.movesets.create(move_id: Move.find_by(name: "Solar Beam").id)
 
-Moveset.new(pokemon_id: 4, move_id: 13)
-Moveset.new(pokemon_id: 4, move_id: 14)
-Moveset.new(pokemon_id: 4, move_id: 15)
-Moveset.new(pokemon_id: 4, move_id: 16)
+squirtle.movesets.create(move_id: Move.find_by(name: "Bubble").id)
+squirtle.movesets.create(move_id: Move.find_by(name: "Hydro Pump").id)
+squirtle.movesets.create(move_id: Move.find_by(name: "Skull Bash").id)
+squirtle.movesets.create(move_id: Move.find_by(name: "Waterfall").id)
 
-Moveset.new(pokemon_id: 5, move_id: 17)
-Moveset.new(pokemon_id: 5, move_id: 18)
-Moveset.new(pokemon_id: 5, move_id: 19)
-Moveset.new(pokemon_id: 5, move_id: 20)
+pidgey.movesets.create(move_id: Move.find_by(name: "Quick Attack").id)
+pidgey.movesets.create(move_id: Move.find_by(name: "Razor Wind").id)
+pidgey.movesets.create(move_id: Move.find_by(name: "Double-Edge").id)
+pidgey.movesets.create(move_id: Move.find_by(name: "Gust").id)
 
-Moveset.new(pokemon_id: 6, move_id: 21)
-Moveset.new(pokemon_id: 6, move_id: 22)
-Moveset.new(pokemon_id: 6, move_id: 23)
-Moveset.new(pokemon_id: 6, move_id: 24)
-
+onix.movesets.create(move_id: Move.find_by(name: "Earthquake").id)
+onix.movesets.create(move_id: Move.find_by(name: "Rock Throw").id)
+onix.movesets.create(move_id: Move.find_by(name: "Rock Slide").id)
+onix.movesets.create(move_id: Move.find_by(name: "Tackle").id)
 
 User.create(username: 'max')
 User.create(username: 'khang')
