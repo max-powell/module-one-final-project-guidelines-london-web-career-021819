@@ -33,7 +33,7 @@ def existing_user_menu_action(menu_choice, user_instance)
     puts "Here's your battlepack"
     show_battlepack(user_instance)
   else
-    puts "2. in dev"
+    battle_link(user_instance)
   end
   continue?(user_instance)
 end
