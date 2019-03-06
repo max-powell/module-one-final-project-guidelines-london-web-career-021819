@@ -3,6 +3,7 @@ def new_user(username)
   user = User.create(username: username)
   new_user_welcome_message(user)
   pokemon_selection(user)
+  menu_loop(user)
 end
 
 def new_user_welcome_message(user)

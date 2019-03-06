@@ -9,8 +9,6 @@ def gets_username
   username = STDIN.gets.chomp
 end
 
-
-
 #### check whether the user exists in the db.
 def existing_user_outcome(username)
   if existing_user?(username)
