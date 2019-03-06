@@ -33,9 +33,17 @@ def existing_user_menu_action(menu_choice, user_instance)
     puts "Here's your battlepack"
     show_battlepack(user_instance)
   else
+    has_pokemon?(user_instance)
     battle_link(user_instance)
   end
   continue?(user_instance)
+end
+
+def has_pokemon?(user_instance)
+  if user_instance.pokemons.count == 0
+    puts "You don't appear to have any pokemons. Please pick at least one pokemon before a battle."
+    pokemon_selection(user_instance)
+  end
 end
 
 def continue?(user_instance)

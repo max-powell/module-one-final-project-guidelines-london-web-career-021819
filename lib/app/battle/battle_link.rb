@@ -15,7 +15,7 @@ def battle_message
 end
 
 def usernames_list(user_instance)
-  User.all.map{|user| user.username.capitalize  if user != user_instance}.compact
+  User.all.map{|user| user.username.capitalize  if user != user_instance && user.pokemons.count > 0}.compact
 end
 
 
