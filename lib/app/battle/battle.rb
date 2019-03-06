@@ -36,7 +36,7 @@ def puts_stats(*battle_packs)
   battle_packs.each do |battle_pack|
     puts "#{battle_pack.pokemon.name.capitalize}, hp: #{battle_pack.pokemon.hp}"
   end
-  puts "\nPress any key to continue..."
+  puts "\nPress enter to continue..."
   gets
 end
 
