@@ -48,15 +48,10 @@ def has_pokemon?(user_instance)
 end
 
 def continue?(user_instance)
-  puts 'Do you want to do anything else? (Y/N)'
-  input = STDIN.gets.chomp
-  case input.downcase
-  when 'y'
+  prompt = TTY::Prompt.new
+  if prompt.yes?('Do you want to do anything else?')
     menu_loop(user_instance)
-  when 'n'
-    puts 'See you next time!'
   else
-    puts 'Invalid input'
-    continue?(user_instance)
+    puts "See you next time!"
   end
 end
