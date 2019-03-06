@@ -11,7 +11,7 @@ def battle(left, right)
     break if target.pokemon.hp == 0
     current, target = target, current
   end
-  puts "#{target.pokemon.name} feinted!"
+  puts "#{target.pokemon.name} fainted!"
 end
 
 def battle_intro(current, target)

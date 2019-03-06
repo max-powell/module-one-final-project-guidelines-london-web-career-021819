@@ -32,7 +32,7 @@ class Pokemon < ActiveRecord::Base
     puts "It's super effective!!!"
     when move.not_effective_against
       mod = 0.5 * rand(1..1.1)
-      put "It's not very effective..."
+      puts "It's not very effective..."
     else
       mod = 1 * rand(0.95..1.05)
     end
