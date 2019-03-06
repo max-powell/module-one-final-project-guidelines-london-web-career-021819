@@ -20,11 +20,14 @@ def battle_intro(current, target)
   puts "VS."
   sleep(1.5)
   puts "#{target.user.username.capitalize}'s #{target.pokemon.name.capitalize}!!!!"
+  sleep(1.5)
 end
 
 def battle_turn(current, target)
   system('clear')
   sleep(1)
+  Catpix.print_image("lib/images/pikachu-f.png", limit_y: 0.5)
+
   puts "It's #{current.pokemon.name}'s turn!"
   move = get_move_selection(current)
   current.pokemon.attack_target(move, target.pokemon)
