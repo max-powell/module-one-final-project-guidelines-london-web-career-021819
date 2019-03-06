@@ -43,10 +43,10 @@ def gets_pokemon_name
   prompt.select('Choose a pokemon:', pokemon_list)
 end
 
-def create_battlepack_instance(user, pokemon_instance)
-  user.battle_packs.create(pokemon_id: pokemon_instance.id)
-end
-
 def pokemon_list
   Pokemon.all.map(&:name)
+end
+
+def create_battlepack_instance(user, pokemon_instance)
+  user.battle_packs.create(pokemon_id: pokemon_instance.id)
 end

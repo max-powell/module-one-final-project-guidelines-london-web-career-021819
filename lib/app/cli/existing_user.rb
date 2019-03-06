@@ -6,37 +6,38 @@ end
 
 def welcome_back_message(username)
   puts "Welcome back #{username}!"
+  sleep(2)
 end
 
 def menu_loop(user_instance)
-  menu_choice = menu
+  menu_choice = existing_user_menu
   existing_user_menu_action(menu_choice, user_instance)
 end
 
-def menu
-  existing_user_menu
-  input = STDIN.gets.chomp
-  if input == "1" || input == "2"
-    input
-  else
-    puts "Invalid selection"
-    menu
-  end
-end
-
 def existing_user_menu
-  puts "What would you like to do? Enter '1' if you want to view your battlepack or '2' if you want to battle."
+  prompt = TTY::Prompt.new
+  prompt.select('What would you like to do?') do |menu|
+    menu. enum '.'
+
+    menu.choice "View your pokemon", 1
+    menu.choice "BATTLE!!!", 2
+    menu.choice "Quit", 3
+  end
 end
 
 def existing_user_menu_action(menu_choice, user_instance)
-  if menu_choice == "1"
+  case menu_choice
+  when 1
     puts "Here's your battlepack"
     show_battlepack(user_instance)
-  else
+    continue?(user_instance)
+  when 2
     has_pokemon?(user_instance)
     battle_link(user_instance)
+    continue?(user_instance)
+  when 3
+    puts 'See you next time!'
   end
-  continue?(user_instance)
 end
 
 def has_pokemon?(user_instance)
