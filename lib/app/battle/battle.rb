@@ -1,6 +1,3 @@
-left = User.all[0].battle_packs[0] #instance of BattlePack
-right = User.all[1].battle_packs[0] #instance of BattlePack
-
 def battle(left, right)
   current = left
   target = right

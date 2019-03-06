@@ -5,8 +5,8 @@ def existing_user(username)
 end
 
 def welcome_back_message(username)
-  puts "Welcome back #{username}!"
-  sleep(2)
+  puts "Welcome back #{username.capitalize}!"
+  sleep(1)
 end
 
 def menu_loop(user_instance)
