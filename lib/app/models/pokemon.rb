@@ -16,12 +16,12 @@ class Pokemon < ActiveRecord::Base
   def hit(move, target)
     damage = damage_calc(move, target)
     new_hp = target.hp - damage
+    puts "\nIt did #{damage} damage!"
     if new_hp < 0
       target.hp = 0
     else
       target.hp = new_hp
-      move.pp -= 1
-      puts "It did #{damage} damage!"
+      move.pp -= 1 if move.pp > 0
     end
   end
 
@@ -29,7 +29,7 @@ class Pokemon < ActiveRecord::Base
     case target.pokemon_type
     when move.effective_against
       mod = 2 * rand(0.9..1)
-    puts "It's super effective!!!"
+      puts "It's super effective!!!"
     when move.not_effective_against
       mod = 0.5 * rand(1..1.1)
       puts "It's not very effective..."

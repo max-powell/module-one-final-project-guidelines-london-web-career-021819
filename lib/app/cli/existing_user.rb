@@ -1,4 +1,5 @@
 def existing_user(username)
+  system('clear')
   user_instance = User.find_by(username: username)
   welcome_back_message(username)
   menu_loop(user_instance)
@@ -50,8 +51,10 @@ end
 def continue?(user_instance)
   prompt = TTY::Prompt.new
   if prompt.yes?('Do you want to do anything else?')
+    system('clear')
     menu_loop(user_instance)
   else
+    system('clear')
     puts "See you next time!"
   end
 end

@@ -5,11 +5,12 @@ def new_user(username)
   sleep(2)
   pokemon_selection(user)
   sleep(2)
+  system('clear')
   menu_loop(user)
 end
 
 def new_user_welcome_message(user)
-  puts "Hi #{user.username}! We haven't seen you around here before and you don't seem to have any pokemons. No self-respecting trainer walks around with no pokemons."
+  puts "Hi #{user.username.capitalize}! We haven't seen you around here before and you don't seem to have any pokemons. No self-respecting trainer walks around with no pokemons."
 end
 
 def pokemon_selection(user)
@@ -31,11 +32,11 @@ def pokemon_selection_loop(user)
     create_battlepack_instance(user, pokemon_instance)
   end
   system('clear')
-  puts "Congratulations #{user.username}, you have selected your 3 pokemons."
+  puts "Congratulations #{user.username.capitalize}, you have selected your 3 pokemons."
 end
 
 def battlepack_space_message(user)
-  puts "You have #{3 - user.battle_packs.count} spaces left in your battlepack."
+  puts "\nYou have #{3 - user.battle_packs.count} spaces left in your battlepack."
 end
 
 def gets_pokemon_name
