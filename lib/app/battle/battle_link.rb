@@ -1,19 +1,11 @@
 def battle_link(user_instance)
-  # battle_message
   list = usernames_list(user_instance)
-  # pokemon_list_formatter(list)
-  # opponent_number = gets_selection_index(list) #utility_methods
   opponent_string = choose_opponent(list).downcase
   opponent = User.find_by(username: opponent_string)
   user_battle_pack = battle_pack_retriever(user_instance)
   opponent_battle_pack = battle_pack_retriever(opponent)
   battle(user_battle_pack, opponent_battle_pack)
 end
-
-
-# def battle_message
-#   puts "Who do you want to challenge?"
-# end
 
 def usernames_list(user_instance)
   list = User.all.map do |user|
@@ -48,5 +40,4 @@ def pokemon_battle_selection(user)
   prompt.mask('Choose 1-3') do |i|
     i.validate(/[1-3]/)
   end
-
 end

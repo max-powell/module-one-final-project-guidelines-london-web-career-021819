@@ -54,7 +54,7 @@ end
 
 def continue?(user_instance)
   prompt = TTY::Prompt.new
-  if prompt.yes?('Do you want to do anything else?')
+  if prompt.yes?('Do you want to do anything else? Enter n to quit.')
     system('clear')
     menu_loop(user_instance)
   else

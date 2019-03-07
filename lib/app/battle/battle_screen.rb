@@ -2,7 +2,11 @@ def generate_screen(left, right)
   terminal_width = IO.console.winsize[1]
 
   # right pokemon
-  right_image = right.pokemon.image
+  if right.pokemon.image
+    right_image = right.pokemon.image
+  else
+    right_image = 'lib/images/missingno.png'
+  end
   right_name = right.pokemon.name.capitalize
   right_current_hp = right.pokemon.hp
   right_starting_hp = right.pokemon.starting_hp
@@ -14,7 +18,11 @@ def generate_screen(left, right)
   puts right_health_bar.rjust(terminal_width/2)
 
   # left pokemon
-  left_image = left.pokemon.image
+  if left.pokemon.image
+    left_image = left.pokemon.image
+  else
+    left_image = 'lib/images/missingno.png'
+  end
   left_health_bar = health_bar(left.pokemon.hp, left.pokemon.starting_hp)
   puts "#{left.pokemon.name.capitalize}\nhp: #{left.pokemon.hp}/#{left.pokemon.starting_hp}\n#{left_health_bar}\n"
   Catpix.print_image(left_image, limit_y: 0.4)
