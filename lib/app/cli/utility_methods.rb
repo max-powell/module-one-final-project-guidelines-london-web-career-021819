@@ -8,7 +8,6 @@ def pokemon_list_formatter(list)
   list.each_with_index {|name, index| puts "#{index+1}. #{name}"}
 end
 
-
 def gets_selection_index(list)
   input = STDIN.gets.chomp.to_i
   if (1..list.length).include?(input)

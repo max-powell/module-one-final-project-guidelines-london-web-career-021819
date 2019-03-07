@@ -1,9 +1,20 @@
 require_relative '../config/environment'
+require 'thread'
 
-welcome
-username = gets_username.downcase
-existing_user_outcome(username)
+thread_1 = Thread.new do
+  play_music
+end
 
-#binding.pry
+
+thread_2 = Thread.new do
+  welcome
+  username = gets_username.downcase
+  existing_user_outcome(username)
+  music_loop = false
+  system("ps -a | grep afplay | awk '{print $1}' | xargs kill -9 ")
+end
+
+thread_2.join
+thread_1.join
 
 "end"
