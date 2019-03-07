@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
 
   def win_ratio
     if self.losses == 0
-      0
+      self.wins
     else
       self.wins/(self.losses.to_f)
     end

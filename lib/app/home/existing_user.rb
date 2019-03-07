@@ -39,6 +39,7 @@ def existing_user_menu_action(menu_choice, user_instance)
     continue?(user_instance)
   when 3
     puts leaderboard
+    continue?(user_instance)
   when 4
     puts 'See you next time!'
   end

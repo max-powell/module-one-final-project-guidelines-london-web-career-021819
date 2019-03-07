@@ -3,6 +3,7 @@ require 'tty-table'
 def leaderboard
   table = TTY::Table.new
   table << ['username', 'wins', 'losses', 'win/lose ratio']
+  table << ["--------", "-----", "-----", "-------------"]
 
   user_ranking.each do |user|
     username = user.username.capitalize
