@@ -75,6 +75,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.5)
+    wavefile (1.1.0)
     wisper (2.0.0)
 
 PLATFORMS
@@ -89,6 +90,7 @@ DEPENDENCIES
   sinatra-activerecord
   sqlite3
   tty-prompt
+  wavefile
 
 BUNDLED WITH
    1.17.3

@@ -4,7 +4,7 @@ def new_user(username)
   new_user_welcome_message(user)
   sleep(2)
   pokemon_selection(user)
-  sleep(2)
+  sleep(1)
   system('clear')
   menu_loop(user)
 end
