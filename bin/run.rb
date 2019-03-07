@@ -1,5 +1,7 @@
 require_relative '../config/environment'
+require 'catpix'
 require 'thread'
+
 
 thread_1 = Thread.new do
   play_music

@@ -1,35 +1,44 @@
 def battle(left, right)
+  battle_intro(left, right)
+  battle_loop(left, right)
+  puts "\n#{left.user.username.capitalize}..."
+end
+
+def battle_intro(left, right)
+  system('clear')
+  sleep(1)
+  puts "It's #{left.user.username.capitalize}'s #{left.pokemon.name.capitalize}..."
+  sleep(1)
+  puts "VS."
+  sleep(1.5)
+  puts "#{right.user.username.capitalize}'s #{right.pokemon.name.capitalize}!!!!"
+  sleep(1.5)
+end
+
+def battle_loop(left, right)
   current = left
   target = right
-  battle_intro(current, target)
   loop do
-    battle_turn(current, target)
-    puts_stats(left, right)
+    system('clear')
+    generate_screen(left, right)
+    move = move_choice(current)
+    system('clear')
+    generate_screen(left, right)
+    current.pokemon.attack_target(move, target.pokemon)
+    puts "\nPress enter to continue..."
+    STDIN.gets
     break if target.pokemon.hp == 0
     current, target = target, current
   end
   system('clear')
+  generate_screen(left, right)
   puts "#{target.pokemon.name.capitalize} fainted!"
-  puts "\n#{left.user.username.capitalize}..."
 end
 
-def battle_intro(current, target)
-  system('clear')
-  sleep(1)
-  puts "It's #{current.user.username.capitalize}'s #{current.pokemon.name.capitalize}..."
-  puts "VS."
-  sleep(1.5)
-  puts "#{target.user.username.capitalize}'s #{target.pokemon.name.capitalize}!!!!"
-end
-
-def battle_turn(current, target)
-  system('clear')
-  sleep(1)
+def move_choice(current)
   puts "It's #{current.pokemon.name}'s turn!"
-  move = get_move_selection(current)
-  current.pokemon.attack_target(move, target.pokemon)
+  get_move_selection(current)
 end
-
 
 def puts_stats(*battle_packs)
   puts ""
