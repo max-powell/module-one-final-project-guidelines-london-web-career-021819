@@ -1,9 +1,9 @@
-pikachu = Pokemon.create(name: 'pikachu', pokemon_type: 'electric', hp: 95, attack: 54, defence: 31, starting_hp: 95, image: nil)
-charmander = Pokemon.create(name: 'charmander', pokemon_type: 'fire', hp: 99, attack: 51, defence: 43, starting_hp: 99, image: nil)
-bulbasaur = Pokemon.create(name: 'bulbasaur', pokemon_type: 'grass', hp: 105, attack: 48, defence: 48, starting_hp: 105, image: nil)
-squirtle = Pokemon.create(name: 'squirtle', pokemon_type: 'water', hp: 104, attack: 47, defence: 53, starting_hp: 104, image: nil)
-pidgey = Pokemon.create(name: 'pidgey', pokemon_type: 'normal', hp: 100, attack: 45, defence: 40, starting_hp: 100, image: nil)
-onix = Pokemon.create(name: 'onix', pokemon_type: 'rock', hp: 95, attack: 45, defence: 148, starting_hp: 95, image: nil)
+pikachu = Pokemon.create(name: 'pikachu', pokemon_type: 'electric', hp: 95, attack: 54, defence: 31, starting_hp: 95, image: 'lib/images/pikachu.png')
+charmander = Pokemon.create(name: 'charmander', pokemon_type: 'fire', hp: 99, attack: 51, defence: 43, starting_hp: 99, image: 'lib/images/charmander.png')
+bulbasaur = Pokemon.create(name: 'bulbasaur', pokemon_type: 'grass', hp: 105, attack: 48, defence: 48, starting_hp: 105, image: 'lib/images/bulbasaur.png')
+squirtle = Pokemon.create(name: 'squirtle', pokemon_type: 'water', hp: 104, attack: 47, defence: 53, starting_hp: 104, image: 'lib/images/squirtle.png')
+pidgey = Pokemon.create(name: 'pidgey', pokemon_type: 'normal', hp: 100, attack: 45, defence: 40, starting_hp: 100, image: 'lib/images/pidgey.png')
+onix = Pokemon.create(name: 'onix', pokemon_type: 'rock', hp: 95, attack: 45, defence: 148, starting_hp: 95, image: 'lib/images/onix.png')
 
 
 #Pikachu
