@@ -4,7 +4,7 @@ def new_user(username)
   new_user_welcome_message(user)
   sleep(2)
   pokemon_selection(user)
-  sleep(2)
+  sleep(1)
   system('clear')
   menu_loop(user)
 end
@@ -18,6 +18,8 @@ def pokemon_selection(user)
   sleep(2)
   pokemon_selection_loop(user)
   show_battlepack(user) #in utility_methods.rb
+  puts "\nPress enter to continue..."
+  gets
 end
 
 def pokemon_selection_message
