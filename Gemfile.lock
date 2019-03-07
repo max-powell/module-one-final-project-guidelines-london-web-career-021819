@@ -62,6 +62,11 @@ GEM
       sinatra (>= 1.0)
     slop (3.6.0)
     sqlite3 (1.3.13)
+    strings (0.1.4)
+      strings-ansi (~> 0.1.0)
+      unicode-display_width (~> 1.4.0)
+      unicode_utils (~> 1.4.0)
+    strings-ansi (0.1.0)
     tco (0.1.8)
     thread_safe (0.3.6)
     tilt (2.0.7)
@@ -79,12 +84,19 @@ GEM
       tty-screen (~> 0.6.4)
       wisper (~> 2.0.0)
     tty-screen (0.6.5)
+    tty-table (0.10.0)
+      equatable (~> 0.5.0)
+      necromancer (~> 0.4.0)
+      pastel (~> 0.7.2)
+      strings (~> 0.1.0)
+      tty-screen (~> 0.6.4)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.5)
-    wavefile (1.1.0)
+    unicode-display_width (1.4.1)
+    unicode_utils (1.4.0)
     wisper (2.0.0)
 
 PLATFORMS
@@ -97,11 +109,10 @@ DEPENDENCIES
   pry
   require_all
   rest-client
-  rmagick
   sinatra-activerecord
   sqlite3
   tty-prompt
-  wavefile
+  tty-table
 
 BUNDLED WITH
    1.17.3

@@ -1,6 +1,6 @@
 #### create new user and prompt them to choose 3 pokemons for their battle_pack.
 def new_user(username)
-  user = User.create(username: username)
+  user = User.create(username: username, wins: 0, losses: 0)
   new_user_welcome_message(user)
   sleep(2)
   pokemon_selection(user)

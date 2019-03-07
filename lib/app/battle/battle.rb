@@ -32,6 +32,12 @@ def battle_loop(left, right)
   end
   system('clear')
   generate_screen(left, right)
+
+  current_wins = current.user.wins + 1
+  current.user.update(wins: current_wins)
+  target_losses = target.user.losses + 1
+  target.user.update(losses: target_losses)
+
   puts "#{target.pokemon.name.capitalize} fainted!"
 end
 

@@ -22,7 +22,8 @@ def existing_user_menu
 
     menu.choice "View your pokemon", 1
     menu.choice "BATTLE!!!", 2
-    menu.choice "Quit", 3
+    menu.choice "View Leaderboard", 3
+    menu.choice "Quit", 4
   end
 end
 
@@ -37,6 +38,9 @@ def existing_user_menu_action(menu_choice, user_instance)
     battle_link(user_instance)
     continue?(user_instance)
   when 3
+    puts leaderboard
+    continue?(user_instance)
+  when 4
     puts 'See you next time!'
   end
 end

@@ -72,8 +72,8 @@ onix.movesets.create(move_id: Move.find_by(name: "Rock Throw").id)
 onix.movesets.create(move_id: Move.find_by(name: "Rock Slide").id)
 onix.movesets.create(move_id: Move.find_by(name: "Tackle").id)
 
-max = User.create(username: 'max')
-khang = User.create(username: 'khang')
+max = User.create(username: 'max', wins: 0, losses: 0)
+khang = User.create(username: 'khang', wins: 0, losses: 0)
 
 max.battle_packs.create(pokemon_id: Pokemon.find_by_name('squirtle').id)
 max.battle_packs.create(pokemon_id: Pokemon.find_by_name('pidgey').id)

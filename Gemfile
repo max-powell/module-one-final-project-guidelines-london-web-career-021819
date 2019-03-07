@@ -10,3 +10,4 @@ gem "json"
 gem "tty-prompt"
 gem "csv"
 gem 'catpix'
+gem 'tty-table'
