@@ -26,8 +26,7 @@ end
 def battle_turn(current, target)
   system('clear')
   sleep(1)
-  Catpix.print_image("lib/images/pikachu-f.png", limit_y: 0.5)
-
+  generate_screen
   puts "It's #{current.pokemon.name}'s turn!"
   move = get_move_selection(current)
   current.pokemon.attack_target(move, target.pokemon)
