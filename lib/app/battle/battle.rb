@@ -36,7 +36,7 @@ def battle_loop(left, right)
 end
 
 def move_choice(current)
-  puts "It's #{current.pokemon.name}'s turn!"
+  puts "It's #{current.pokemon.name.capitalize}'s turn!"
   get_move_selection(current)
 end
 

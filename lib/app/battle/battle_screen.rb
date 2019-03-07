@@ -16,8 +16,8 @@ def generate_screen(left, right)
   # left pokemon
   left_image = left.pokemon.image
   left_health_bar = health_bar(left.pokemon.hp, left.pokemon.starting_hp)
-  Catpix.print_image(left_image, limit_y: 0.4)
   puts "#{left.pokemon.name.capitalize}\nhp: #{left.pokemon.hp}/#{left.pokemon.starting_hp}\n#{left_health_bar}\n"
+  Catpix.print_image(left_image, limit_y: 0.4)
   puts '-' * terminal_width
 end
 
