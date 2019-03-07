@@ -26,9 +26,11 @@ end
 def battle_turn(current, target)
   system('clear')
   sleep(1)
-  generate_screen
+  generate_screen(current, target)
   puts "It's #{current.pokemon.name}'s turn!"
   move = get_move_selection(current)
+  system('clear')
+  generate_screen(current, target)
   current.pokemon.attack_target(move, target.pokemon)
 end
 
