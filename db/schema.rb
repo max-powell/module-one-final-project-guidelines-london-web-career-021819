@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190304144131) do
+ActiveRecord::Schema.define(version: 20190307101633) do
 
   create_table "battle_packs", force: :cascade do |t|
     t.integer "user_id"
@@ -37,6 +37,8 @@ ActiveRecord::Schema.define(version: 20190304144131) do
     t.integer "hp"
     t.integer "attack"
     t.integer "defence"
+    t.integer "starting_hp"
+    t.string  "image"
   end
 
   create_table "users", force: :cascade do |t|
