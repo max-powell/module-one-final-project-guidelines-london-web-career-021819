@@ -1,6 +1,11 @@
 #### welcome greeting and prompt user to enter username.
 def welcome
   puts "Welcome to the world of Pokemon!"
+  system('clear')
+  sleep(2)
+  Catpix.print_image('lib/images/pokemon_logo.png', limit_y: 0.6, center_x: true)
+  Catpix.print_image('lib/images/battler.png', limit_x: 0.4, center_x: true)
+  puts "\nWelcome to the world of Pokemon!"
 end
 
 def gets_username
