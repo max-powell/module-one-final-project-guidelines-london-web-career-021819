@@ -4,8 +4,8 @@ bulbasaur = Pokemon.create(name: 'bulbasaur', pokemon_type: 'grass poison', hp: 
 squirtle = Pokemon.create(name: 'squirtle', pokemon_type: 'water', hp: 204, attack: 47, defence: 53, starting_hp: 204, image: 'lib/images/squirtle.png')
 pidgey = Pokemon.create(name: 'pidgey', pokemon_type: 'normal flying', hp: 200, attack: 45, defence: 40, starting_hp: 200, image: 'lib/images/pidgey.png')
 onix = Pokemon.create(name: 'onix', pokemon_type: 'rock ground', hp: 190, attack: 32, defence: 148, starting_hp: 190, image: 'lib/images/onix.png')
-koffing = Pokemon.create(name: 'koffing', pokemon_type: 'poison', hp: 200, attack: 59, defence: 32, starting_hp: 200, image: nil)
-lapras = Pokemon.create(name:'lapras', pokemon_type: 'water ice', hp: 237, attack: 33, defence: 76, starting_hp: 237, image: nil)
+koffing = Pokemon.create(name: 'koffing', pokemon_type: 'poison', hp: 200, attack: 59, defence: 32, starting_hp: 200, image: 'lib/images/koffing.webp')
+lapras = Pokemon.create(name:'lapras', pokemon_type: 'water ice', hp: 237, attack: 33, defence: 76, starting_hp: 237, image: 'lib/images/lapras.png')
 
 
 
@@ -102,6 +102,6 @@ max.battle_packs.create(pokemon_id: Pokemon.find_by_name('squirtle').id)
 max.battle_packs.create(pokemon_id: Pokemon.find_by_name('pidgey').id)
 max.battle_packs.create(pokemon_id: Pokemon.find_by_name('onix').id)
 
-khang.battle_packs.create(pokemon_id: Pokemon.find_by_name('pikachu').id)
+khang.battle_packs.create(pokemon_id: Pokemon.find_by_name('lapras').id)
 khang.battle_packs.create(pokemon_id: Pokemon.find_by_name('charmander').id)
 khang.battle_packs.create(pokemon_id: Pokemon.find_by_name('bulbasaur').id)
