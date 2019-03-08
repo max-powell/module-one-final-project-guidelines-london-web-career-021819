@@ -4,6 +4,9 @@ bulbasaur = Pokemon.create(name: 'bulbasaur', pokemon_type: 'grass poison', hp: 
 squirtle = Pokemon.create(name: 'squirtle', pokemon_type: 'water', hp: 204, attack: 47, defence: 53, starting_hp: 204, image: 'lib/images/squirtle.png')
 pidgey = Pokemon.create(name: 'pidgey', pokemon_type: 'normal flying', hp: 200, attack: 45, defence: 40, starting_hp: 200, image: 'lib/images/pidgey.png')
 onix = Pokemon.create(name: 'onix', pokemon_type: 'rock ground', hp: 190, attack: 32, defence: 148, starting_hp: 190, image: 'lib/images/onix.png')
+koffing = Pokemon.create(name: 'koffing', pokemon_type: 'poison', hp: 200, attack: 59, defence: 32, starting_hp: 200, image: nil)
+lapras = Pokemon.create(name:'lapras', pokemon_type: 'water ice', hp: 237, attack: 33, defence: 76, starting_hp: 237, image: nil)
+
 
 
 #Pikachu
@@ -41,6 +44,16 @@ Move.create(name: 'Rock Throw', power: 50, accuracy: 90, pp: 6, effective_agains
 Move.create(name: 'Rock Slide', power: 75, accuracy: 75, pp: 4, effective_against: 'fire flying ice bug', not_effective_against: 'fighting ground steel')
 Move.create(name: 'Tackle', power: 35, accuracy: 90, pp: 6, effective_against: '', not_effective_against: 'rock ghost steel')
 
+#Koffing moves
+Move.create(name: 'Smog', power: 40, accuracy: 90, pp: 5, effective_against: 'grass bug', not_effective_against: 'poison ground rock ghost')
+Move.create(name: 'Sludge', power: 65, accuracy: 90, pp: 4, effective_against: 'grass bug', not_effective_against: 'poison ground rock ghost')
+Move.create(name: 'Explosion', power: 170, accuracy: 15, pp: 2, effective_against: '', not_effective_against: 'rock ghost steel')
+
+#Lapras moves
+Move.create(name: 'Ice Beam', power: 95, accuracy: 90, pp: 3, effective_against: 'grass ground flying dragon', not_effective_against: 'fire water ice steel')
+Move.create(name: 'Surf', power: 75, accuracy: 90, pp: 4, effective_against: 'fire ground rock', not_effective_against: 'water dragon grass')
+Move.create(name: 'Body Slam', power: 80, accuracy: 90, pp: 5, effective_against: '', not_effective_against: 'rock ghost')
+Move.create(name: 'Blizzard', power: 120, accuracy: 75, pp: 1, effective_against: 'grass ground flying dragon', not_effective_against: 'fire water ice steel')
 
 pikachu.movesets.create(move_id: Move.find_by(name: 'Thunder Shock').id)
 pikachu.movesets.create(move_id: Move.find_by(name: 'Quick Attack').id)
@@ -71,6 +84,16 @@ onix.movesets.create(move_id: Move.find_by(name: "Earthquake").id)
 onix.movesets.create(move_id: Move.find_by(name: "Rock Throw").id)
 onix.movesets.create(move_id: Move.find_by(name: "Rock Slide").id)
 onix.movesets.create(move_id: Move.find_by(name: "Tackle").id)
+
+koffing.movesets.create(move_id: Move.find_by(name: "Tackle").id)
+koffing.movesets.create(move_id: Move.find_by(name: "Smog").id)
+koffing.movesets.create(move_id: Move.find_by(name: "Sludge").id)
+koffing.movesets.create(move_id: Move.find_by(name: "Explosion").id)
+
+lapras.movesets.create(move_id: Move.find_by(name: "Ice Beam").id)
+lapras.movesets.create(move_id: Move.find_by(name: "Surf").id)
+lapras.movesets.create(move_id: Move.find_by(name: "Body Slam").id)
+lapras.movesets.create(move_id: Move.find_by(name: "Blizzard").id)
 
 max = User.create(username: 'max', wins: 0, losses: 0)
 khang = User.create(username: 'khang', wins: 0, losses: 0)
