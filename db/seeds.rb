@@ -8,6 +8,7 @@ koffing = Pokemon.create(name: 'koffing', pokemon_type: 'poison', hp: 200, attac
 lapras = Pokemon.create(name:'lapras', pokemon_type: 'water ice', hp: 237, attack: 33, defence: 76, starting_hp: 237, image: 'lib/images/lapras.png')
 butterfree = Pokemon.create(name: 'butterfree', pokemon_type: 'bug flying', hp: 197, attack: 45, defence: 59, starting_hp: 197, image: nil)
 mankey = Pokemon.create(name: 'mankey', pokemon_type: 'fighting', hp: 200, attack: 76, defence: 36, starting_hp: 200, image: nil)
+sandshrew = Pokemon.create(name: 'sandshrew', pokemon_type: 'ground', hp: 203, attack: 72, defence: 46, starting_hp: 203, image: nil)
 
 
 
@@ -69,6 +70,8 @@ Move.create(name: 'Karate Chop', power: 50, accuracy: 90, pp: 5, effective_again
 Move.create(name: 'Low Kick', power: 50, accuracy: 90, pp: 5, effective_against: 'normal ice rock dark steel', not_effective_against: 'poison flying psychic bug ghost fairy')
 Move.create(name: 'Fire Punch', power: 75, accuracy: 90, pp: 3, effective_against: 'grass ice bug', not_effective_against: 'fire water rock dragon')
 
+#Sandshrew moves
+Move.create(name:'Dig', power: 100, accuracy: 90, pp: 1, effective_against: 'fire electric poison rock steel', not_effective_against: 'grass flying bug')
 
 pikachu.movesets.create(move_id: Move.find_by(name: 'Thunder Shock').id)
 pikachu.movesets.create(move_id: Move.find_by(name: 'Quick Attack').id)
@@ -119,6 +122,11 @@ mankey.movesets.create(move_id: Move.find_by(name: "Dynamic Punch").id)
 mankey.movesets.create(move_id: Move.find_by(name: "Karate Chop").id)
 mankey.movesets.create(move_id: Move.find_by(name: "Low Kick").id)
 mankey.movesets.create(move_id: Move.find_by(name: "Fire Punch").id)
+
+sandshrew.movesets.create(move_id: Move.find_by(name: "Slash").id)
+sandshrew.movesets.create(move_id: Move.find_by(name: "Earthquake").id)
+sandshrew.movesets.create(move_id: Move.find_by(name: "Dig").id)
+sandshrew.movesets.create(move_id: Move.find_by(name: "Scratch").id)
 
 max = User.create(username: 'max', wins: 0, losses: 0)
 khang = User.create(username: 'khang', wins: 0, losses: 0)
