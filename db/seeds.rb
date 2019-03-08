@@ -6,10 +6,9 @@ pidgey = Pokemon.create(name: 'pidgey', pokemon_type: 'normal flying', hp: 200, 
 onix = Pokemon.create(name: 'onix', pokemon_type: 'rock ground', hp: 190, attack: 32, defence: 148, starting_hp: 190, image: 'lib/images/onix.png')
 koffing = Pokemon.create(name: 'koffing', pokemon_type: 'poison', hp: 200, attack: 59, defence: 32, starting_hp: 200, image: 'lib/images/koffing.webp')
 lapras = Pokemon.create(name:'lapras', pokemon_type: 'water ice', hp: 237, attack: 33, defence: 76, starting_hp: 237, image: 'lib/images/lapras.png')
-butterfree = Pokemon.create(name: 'butterfree', pokemon_type: 'bug flying', hp: 197, attack: 45, defence: 59, starting_hp: 197, image: nil)
-mankey = Pokemon.create(name: 'mankey', pokemon_type: 'fighting', hp: 200, attack: 76, defence: 36, starting_hp: 200, image: nil)
 sandshrew = Pokemon.create(name: 'sandshrew', pokemon_type: 'ground', hp: 203, attack: 72, defence: 46, starting_hp: 203, image: nil)
-
+butterfree = Pokemon.create(name: 'butterfree', pokemon_type: 'bug flying', hp: 197, attack: 45, defence: 59, starting_hp: 197, image: 'lib/images/butterfree.png')
+mankey = Pokemon.create(name: 'mankey', pokemon_type: 'fighting', hp: 200, attack: 76, defence: 36, starting_hp: 200, image: 'lib/images/mankey.png')
 
 
 #Pikachu
