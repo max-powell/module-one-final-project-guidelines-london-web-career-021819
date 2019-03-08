@@ -6,6 +6,8 @@ pidgey = Pokemon.create(name: 'pidgey', pokemon_type: 'normal flying', hp: 200, 
 onix = Pokemon.create(name: 'onix', pokemon_type: 'rock ground', hp: 190, attack: 32, defence: 148, starting_hp: 190, image: 'lib/images/onix.png')
 koffing = Pokemon.create(name: 'koffing', pokemon_type: 'poison', hp: 200, attack: 59, defence: 32, starting_hp: 200, image: 'lib/images/koffing.webp')
 lapras = Pokemon.create(name:'lapras', pokemon_type: 'water ice', hp: 237, attack: 33, defence: 76, starting_hp: 237, image: 'lib/images/lapras.png')
+butterfree = Pokemon.create(name: 'butterfree', pokemon_type: 'bug flying', hp: 197, attack: 45, defence: 59, starting_hp: 197, image: nil)
+mankey = Pokemon.create(name: 'mankey', pokemon_type: 'fighting', hp: 200, attack: 76, defence: 36, starting_hp: 200, image: nil)
 
 
 
@@ -55,6 +57,19 @@ Move.create(name: 'Surf', power: 75, accuracy: 90, pp: 4, effective_against: 'fi
 Move.create(name: 'Body Slam', power: 80, accuracy: 90, pp: 5, effective_against: '', not_effective_against: 'rock ghost')
 Move.create(name: 'Blizzard', power: 120, accuracy: 75, pp: 1, effective_against: 'grass ground flying dragon', not_effective_against: 'fire water ice steel')
 
+#Butterfree moves
+Move.create(name: 'Bug Buzz', power: 90, accuracy: 90, pp: 2, effective_against: 'grass psychic dark', not_effective_against: 'fire fighting poison flying ghost steel fairy')
+Move.create(name: 'Giga Drain', power: 60, accuracy: 90, pp: 5, effective_against: 'water ground rock', not_effective_against: 'fire grass poison flying bug dragon')
+Move.create(name:'Aerial Ace', power: 60, accuracy: 90, pp: 5, effective_against: 'grass fighting bug', not_effective_against: 'electric rock steel')
+Move.create(name: 'Struggle Bug', power: 40, accuracy: 95, pp: 5, effective_against: 'grass psychic dark', not_effective_against: 'fire fighting poison flying ghost steel fairy')
+
+#Mankey moves
+Move.create(name: 'Dynamic Punch', power: 100, accuracy: 55, pp: 2, effective_against: 'normal ice rock dark steel', not_effective_against: 'poison flying psychic bug ghost fairy')
+Move.create(name: 'Karate Chop', power: 50, accuracy: 90, pp: 5, effective_against: 'normal ice rock dark steel', not_effective_against: 'poison flying psychic bug ghost fairy')
+Move.create(name: 'Low Kick', power: 50, accuracy: 90, pp: 5, effective_against: 'normal ice rock dark steel', not_effective_against: 'poison flying psychic bug ghost fairy')
+Move.create(name: 'Fire Punch', power: 75, accuracy: 90, pp: 3, effective_against: 'grass ice bug', not_effective_against: 'fire water rock dragon')
+
+
 pikachu.movesets.create(move_id: Move.find_by(name: 'Thunder Shock').id)
 pikachu.movesets.create(move_id: Move.find_by(name: 'Quick Attack').id)
 pikachu.movesets.create(move_id: Move.find_by(name: 'Headbutt').id)
@@ -94,6 +109,16 @@ lapras.movesets.create(move_id: Move.find_by(name: "Ice Beam").id)
 lapras.movesets.create(move_id: Move.find_by(name: "Surf").id)
 lapras.movesets.create(move_id: Move.find_by(name: "Body Slam").id)
 lapras.movesets.create(move_id: Move.find_by(name: "Blizzard").id)
+
+butterfree.movesets.create(move_id: Move.find_by(name: "Bug Buzz").id)
+butterfree.movesets.create(move_id: Move.find_by(name: "Giga Drain").id)
+butterfree.movesets.create(move_id: Move.find_by(name: "Aerial Ace").id)
+butterfree.movesets.create(move_id: Move.find_by(name: "Struggle Bug").id)
+
+mankey.movesets.create(move_id: Move.find_by(name: "Dynamic Punch").id)
+mankey.movesets.create(move_id: Move.find_by(name: "Karate Chop").id)
+mankey.movesets.create(move_id: Move.find_by(name: "Low Kick").id)
+mankey.movesets.create(move_id: Move.find_by(name: "Fire Punch").id)
 
 max = User.create(username: 'max', wins: 0, losses: 0)
 khang = User.create(username: 'khang', wins: 0, losses: 0)
