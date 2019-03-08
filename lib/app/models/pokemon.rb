@@ -26,11 +26,10 @@ class Pokemon < ActiveRecord::Base
   end
 
   def damage_calc(move, target)
-    case target.pokemon_type
-    when move.effective_against
+    if (target.pokemon_type.split & move.effective_against.split).any?
       mod = 2 * rand(0.9..1)
       puts "It's super effective!!!"
-    when move.not_effective_against
+    elsif (target.pokemon_type.split & move.not_effective_against.split).any?
       mod = 0.5 * rand(1..1.1)
       puts "It's not very effective..."
     else

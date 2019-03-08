@@ -8,38 +8,38 @@ onix = Pokemon.create(name: 'onix', pokemon_type: 'rock ground', hp: 190, attack
 
 #Pikachu
 Move.create(name: 'Thunder Shock', power: 40, accuracy: 90, pp: 3, effective_against: 'water flying', not_effective_against: 'grass electric ground dragon')
-Move.create(name: 'Quick Attack', power: 40, accuracy: 90, pp: 3, effective_against: nil, not_effective_against: 'rock ghost')
-Move.create(name: 'Headbutt', power: 70, accuracy: 90, pp: 2, effective_against: nil, not_effective_against: 'rock ghost')
+Move.create(name: 'Quick Attack', power: 40, accuracy: 90, pp: 3, effective_against: '', not_effective_against: 'rock ghost')
+Move.create(name: 'Headbutt', power: 70, accuracy: 90, pp: 2, effective_against: '', not_effective_against: 'rock ghost')
 Move.create(name: 'Thunderbolt', power: 90, accuracy: 90, pp: 2, effective_against: 'water flying', not_effective_against: 'grass electric ground dragon')
 
 #Charmander
-Move.create(name: 'Scratch', power: 40, accuracy: 90, pp: 4, effective_against: nil, not_effective_against: 'rock ghost')
+Move.create(name: 'Scratch', power: 40, accuracy: 90, pp: 4, effective_against: '', not_effective_against: 'rock ghost')
 Move.create(name: 'Ember', power: 40, accuracy: 90, pp: 4, effective_against: 'grass ice bug', not_effective_against: 'fire water rock dragon')
-Move.create(name: 'Slash', power: 70, accuracy: 90, pp: 2, effective_against: nil, not_effective_against: 'rock ghost')
+Move.create(name: 'Slash', power: 70, accuracy: 90, pp: 2, effective_against: '', not_effective_against: 'rock ghost')
 Move.create(name: 'Flamethrower', power: 95, accuracy: 90, pp: 2, effective_against: 'grass ice bug', not_effective_against: 'fire water rock dragon')
 
 #Bulbasaur
-Move.create(name: 'Tackle', power: 35, accuracy: 90, pp: 4, effective_against: nil, not_effective_against: 'rock ghost')
+Move.create(name: 'Tackle', power: 35, accuracy: 90, pp: 4, effective_against: '', not_effective_against: 'rock ghost')
 Move.create(name: 'Vine Whip', power: 35, accuracy: 90, pp: 4, effective_against: 'water ground rock', not_effective_against: 'fire grass poison flying bug dragon')
 Move.create(name: 'Razor Leaf', power: 55, accuracy: 90, pp: 3, effective_against: 'water ground rock', not_effective_against: 'fire grass poison flying bug dragon')
 Move.create(name: 'Solar Beam', power: 120, accuracy: 90, pp: 1, effective_against: 'water ground rock', not_effective_against: 'fire grass poison flying bug dragon')
 
 #Squirtle moves
-Move.create(name:‘Bubble’, power: 40, accuracy: 90, pp: 3, effective_against: ‘fire ground rock’, not_effective_against: ‘water dragon grass’)
-Move.create(name:‘Hydro Pump’, power: 110, accuracy: 80, pp: 1, effective_against: ‘fire ground rock’, not_effective_against: ‘water dragon grass’)
-Move.create(name:‘Skull Bash’, power: 110, accuracy: 80, pp: 1, effective_against: nil , not_effective_against: ‘rock ghost steel’)
-Move.create(name:‘Waterfall’, power: 80, accuracy: 90, pp: 2, effective_against: ‘fire ground rock’, not_effective_against: ‘water dragon grass’)
+Move.create(name:'Bubble', power: 40, accuracy: 90, pp: 3, effective_against: 'fire ground rock', not_effective_against: 'water dragon grass')
+Move.create(name:'Hydro Pump', power: 110, accuracy: 80, pp: 1, effective_against: 'fire ground rock', not_effective_against: 'water dragon grass')
+Move.create(name:'Skull Bash', power: 110, accuracy: 80, pp: 1, effective_against: '' , not_effective_against: 'rock ghost steel')
+Move.create(name:'Waterfall', power: 80, accuracy: 90, pp: 2, effective_against: 'fire ground rock', not_effective_against: 'water dragon grass')
 
 #Pidgey moves
-Move.create(name:‘Razor Wind’, power: 80, accuracy: 75, pp: 1, effective_against: nil, not_effective_against: ‘rock ghost steel’)
-Move.create(name:‘Wing Attack’, power: 100, accuracy: 90, pp: 1, effective_against: ‘grass fighting bug’, not_effective_against: ‘electric rock steel’)
-Move.create(name:‘Air Slash’, power: 80, accuracy: 90, pp: 3, effective_against: ‘grass fighting bug’, not_effective_against: ‘electric rock steel’)
+Move.create(name:'Razor Wind', power: 80, accuracy: 75, pp: 1, effective_against: '', not_effective_against: 'rock ghost steel')
+Move.create(name:'Wing Attack', power: 100, accuracy: 90, pp: 1, effective_against: 'grass fighting bug', not_effective_against: 'electric rock steel')
+Move.create(name:'Air Slash', power: 80, accuracy: 90, pp: 3, effective_against: 'grass fighting bug', not_effective_against: 'electric rock steel')
 
 #Onix moves
-Move.create(name:‘Earthquake’, power: 100, accuracy: 90, pp: 1, effective_against: ‘fire electric poison rock steel’, not_effective_against: ‘grass flying bug’)
-Move.create(name: ‘Rock Throw’, power: 50, accuracy: 90, pp: 2, effective_against: ‘fire flying ice bug’, not_effective_against: ‘fighting ground steel’)
-Move.create(name: ‘Rock Slide’, power: 75, accuracy: 75, pp: 1, effective_against: ‘fire flying ice bug’, not_effective_against: ‘fighting ground steel’)
-Move.create(name: ‘Tackle’, power: 35, accuracy: 90, pp: 4, effective_against: nil, not_effective_against: ‘rock ghost steel’)
+Move.create(name:'Earthquake', power: 100, accuracy: 90, pp: 1, effective_against: 'fire electric poison rock steel', not_effective_against: 'grass flying bug')
+Move.create(name: 'Rock Throw', power: 50, accuracy: 90, pp: 2, effective_against: 'fire flying ice bug', not_effective_against: 'fighting ground steel')
+Move.create(name: 'Rock Slide', power: 75, accuracy: 75, pp: 1, effective_against: 'fire flying ice bug', not_effective_against: 'fighting ground steel')
+Move.create(name: 'Tackle', power: 35, accuracy: 90, pp: 4, effective_against: '', not_effective_against: 'rock ghost steel')
 
 
 pikachu.movesets.create(move_id: Move.find_by(name: 'Thunder Shock').id)
@@ -62,10 +62,10 @@ squirtle.movesets.create(move_id: Move.find_by(name: "Hydro Pump").id)
 squirtle.movesets.create(move_id: Move.find_by(name: "Skull Bash").id)
 squirtle.movesets.create(move_id: Move.find_by(name: "Waterfall").id)
 
-pidgey.movesets.create(move_id: Move.find_by(name: “Quick Attack”).id)
-pidgey.movesets.create(move_id: Move.find_by(name: “Razor Wind”).id)
-pidgey.movesets.create(move_id: Move.find_by(name: “Air Slash”).id)
-pidgey.movesets.create(move_id: Move.find_by(name: “Wing Attack”).id)
+pidgey.movesets.create(move_id: Move.find_by(name: "Quick Attack").id)
+pidgey.movesets.create(move_id: Move.find_by(name: "Razor Wind").id)
+pidgey.movesets.create(move_id: Move.find_by(name: "Air Slash").id)
+pidgey.movesets.create(move_id: Move.find_by(name: "Wing Attack").id)
 
 onix.movesets.create(move_id: Move.find_by(name: "Earthquake").id)
 onix.movesets.create(move_id: Move.find_by(name: "Rock Throw").id)
