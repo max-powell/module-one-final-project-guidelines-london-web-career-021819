@@ -1,28 +1,28 @@
 pikachu = Pokemon.create(name: 'pikachu', pokemon_type: 'electric', hp: 95, attack: 54, defence: 31, starting_hp: 95, image: 'lib/images/pikachu.png')
 charmander = Pokemon.create(name: 'charmander', pokemon_type: 'fire', hp: 99, attack: 51, defence: 43, starting_hp: 99, image: 'lib/images/charmander.png')
-bulbasaur = Pokemon.create(name: 'bulbasaur', pokemon_type: 'grass', hp: 105, attack: 48, defence: 48, starting_hp: 105, image: 'lib/images/bulbasaur.png')
+bulbasaur = Pokemon.create(name: 'bulbasaur', pokemon_type: 'grass poison', hp: 105, attack: 48, defence: 48, starting_hp: 105, image: 'lib/images/bulbasaur.png')
 squirtle = Pokemon.create(name: 'squirtle', pokemon_type: 'water', hp: 104, attack: 47, defence: 53, starting_hp: 104, image: 'lib/images/squirtle.png')
-pidgey = Pokemon.create(name: 'pidgey', pokemon_type: 'normal', hp: 100, attack: 45, defence: 40, starting_hp: 100, image: 'lib/images/pidgey.png')
-onix = Pokemon.create(name: 'onix', pokemon_type: 'rock', hp: 95, attack: 45, defence: 148, starting_hp: 95, image: 'lib/images/onix.png')
+pidgey = Pokemon.create(name: 'pidgey', pokemon_type: 'normal flying', hp: 100, attack: 45, defence: 40, starting_hp: 100, image: 'lib/images/pidgey.png')
+onix = Pokemon.create(name: 'onix', pokemon_type: 'rock ground', hp: 95, attack: 45, defence: 148, starting_hp: 95, image: 'lib/images/onix.png')
 
 
 #Pikachu
-Move.create(name: 'Thunder Shock', power: 40, accuracy: 90, pp: 3, effective_against: 'water', not_effective_against: 'grass')
-Move.create(name: 'Quick Attack', power: 40, accuracy: 90, pp: 3, effective_against: nil, not_effective_against: 'rock')
-Move.create(name: 'Headbutt', power: 70, accuracy: 90, pp: 2, effective_against: nil, not_effective_against: 'rock')
-Move.create(name: 'Thunderbolt', power: 90, accuracy: 90, pp: 2, effective_against: 'water', not_effective_against: 'grass')
+Move.create(name: 'Thunder Shock', power: 40, accuracy: 90, pp: 3, effective_against: 'water flying', not_effective_against: 'grass electric ground dragon')
+Move.create(name: 'Quick Attack', power: 40, accuracy: 90, pp: 3, effective_against: nil, not_effective_against: 'rock ghost')
+Move.create(name: 'Headbutt', power: 70, accuracy: 90, pp: 2, effective_against: nil, not_effective_against: 'rock ghost')
+Move.create(name: 'Thunderbolt', power: 90, accuracy: 90, pp: 2, effective_against: 'water flying', not_effective_against: 'grass electric ground dragon')
 
 #Charmander
-Move.create(name: 'Scratch', power: 40, accuracy: 90, pp: 4, effective_against: nil, not_effective_against: 'rock')
-Move.create(name: 'Ember', power: 40, accuracy: 90, pp: 4, effective_against: 'grass', not_effective_against: 'water')
-Move.create(name: 'Slash', power: 70, accuracy: 90, pp: 2, effective_against: nil, not_effective_against: 'rock')
-Move.create(name: 'Flamethrower', power: 95, accuracy: 90, pp: 2, effective_against: 'grass', not_effective_against: 'water')
+Move.create(name: 'Scratch', power: 40, accuracy: 90, pp: 4, effective_against: nil, not_effective_against: 'rock ghost')
+Move.create(name: 'Ember', power: 40, accuracy: 90, pp: 4, effective_against: 'grass ice bug', not_effective_against: 'fire water rock dragon')
+Move.create(name: 'Slash', power: 70, accuracy: 90, pp: 2, effective_against: nil, not_effective_against: 'rock ghost')
+Move.create(name: 'Flamethrower', power: 95, accuracy: 90, pp: 2, effective_against: 'grass ice bug', not_effective_against: 'fire water rock dragon')
 
 #Bulbasaur
-Move.create(name: 'Tackle', power: 35, accuracy: 90, pp: 4, effective_against: nil, not_effective_against: 'rock')
-Move.create(name: 'Vine Whip', power: 35, accuracy: 90, pp: 4, effective_against: 'water', not_effective_against: 'fire')
-Move.create(name: 'Razor Leaf', power: 55, accuracy: 90, pp: 3, effective_against: 'water', not_effective_against: 'fire')
-Move.create(name: 'Solar Beam', power: 120, accuracy: 90, pp: 1, effective_against: 'water', not_effective_against: 'fire')
+Move.create(name: 'Tackle', power: 35, accuracy: 90, pp: 4, effective_against: nil, not_effective_against: 'rock ghost')
+Move.create(name: 'Vine Whip', power: 35, accuracy: 90, pp: 4, effective_against: 'water ground rock', not_effective_against: 'fire grass poison flying bug dragon')
+Move.create(name: 'Razor Leaf', power: 55, accuracy: 90, pp: 3, effective_against: 'water ground rock', not_effective_against: 'fire grass poison flying bug dragon')
+Move.create(name: 'Solar Beam', power: 120, accuracy: 90, pp: 1, effective_against: 'water ground rock', not_effective_against: 'fire grass poison flying bug dragon')
 
 #Squirtle moves
 Move.create(name:'Bubble', power: 40, accuracy: 90, pp: 3, effective_against: 'fire', not_effective_against: 'grass')
