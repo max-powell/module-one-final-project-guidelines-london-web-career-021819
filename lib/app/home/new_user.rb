@@ -29,7 +29,6 @@ end
 def pokemon_selection_loop(user)
   while user.battle_packs.count < 3
     battlepack_space_message(user)
-    # pokemon_list_formatter(pokemon_list) #in utility_methods.rb
     pokemon_instance = Pokemon.find_by_name(gets_pokemon_name)
     create_battlepack_instance(user, pokemon_instance)
   end
@@ -43,7 +42,7 @@ end
 
 def gets_pokemon_name
   prompt = TTY::Prompt.new
-  prompt.select('Choose a pokemon:', pokemon_list)
+  prompt.select('Choose a pokemon:', pokemon_list, per_page: pokemon_list.length)
 end
 
 def pokemon_list
